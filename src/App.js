@@ -6,6 +6,14 @@ import Starred from './pages/Starred';
 import Show from './pages/Show';
 
 function App() {
+  /* const theme = {
+    mainColors: {
+      blue: '#2400ff',
+      gray: '#c6c6c6',
+      dark: '#353535',
+    },
+  }; */
+
   return (
     <Switch>
       <Route exact path="/">
