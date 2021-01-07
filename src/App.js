@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import { ThemeProvider } from 'styled-components';
 
 import Home from './pages/Home';
@@ -31,7 +30,9 @@ function App() {
           <Show />
         </Route>
 
-        <Route>Not Found</Route>
+        <Route>
+          <div>Not found</div>
+        </Route>
       </Switch>
     </ThemeProvider>
   );

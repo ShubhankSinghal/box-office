@@ -1,24 +1,21 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Cast from '../components/show/Cast';
+import ShowMainData from '../components/show/ShowMainData';
 import Details from '../components/show/Details';
 import Seasons from '../components/show/Seasons';
-import ShowMainData from '../components/show/ShowMainData';
+import Cast from '../components/show/Cast';
+import { ShowPageWrapper, InfoBlock } from './Show.styled';
 import { useShow } from '../misc/custom-hooks';
-import { InfoBlock, ShowPageWrapper } from './Show.styled';
 
 const Show = () => {
   const { id } = useParams();
   const { show, isLoading, error } = useShow(id);
 
-  // const [show, setShow] = useState(null);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [error, setError] = useState(null);
-
   if (isLoading) {
     return <div>Data is being loaded</div>;
   }
+
   if (error) {
     return <div>Error occured: {error}</div>;
   }
