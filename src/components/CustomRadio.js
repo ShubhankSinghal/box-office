@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 export const RadioWrapper = styled.label`
@@ -51,3 +52,15 @@ export const RadioWrapper = styled.label`
     background: ${({ theme }) => theme.mainColors.blue};
   }
 `;
+
+const CustomRadio = ({ label, ...restProps }) => (
+  <div>
+    <RadioWrapper htmlFor={restProps.id}>
+      {label}
+      <input {...restProps} type="radio" />
+      <span />
+    </RadioWrapper>
+  </div>
+);
+
+export default CustomRadio;
